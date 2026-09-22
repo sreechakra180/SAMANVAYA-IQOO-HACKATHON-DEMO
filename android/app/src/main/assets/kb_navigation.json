@@ -1,0 +1,27 @@
+[
+  {
+    "id": "obstacle_chair",
+    "content": "Chair or seat ahead. Slow down. The object is at seated height. Move around it to the left or right.",
+    "source": "Accessibility navigation"
+  },
+  {
+    "id": "obstacle_table",
+    "content": "Table or desk ahead. Slow down. The surface is at waist height. Move around it carefully.",
+    "source": "Accessibility navigation"
+  },
+  {
+    "id": "door_open",
+    "content": "Open door or doorway ahead. You can proceed through this opening. Check if there are steps on the other side.",
+    "source": "Accessibility navigation"
+  },
+  {
+    "id": "door_closed",
+    "content": "Closed door ahead. The door may have a handle on the left or right side. Feel for the handle to open it.",
+    "source": "Accessibility navigation"
+  },
+  {
+    "id": "general_obstacle",
+    "content": "Object detected ahead. Slow down and proceed carefully. The path may be partially blocked.",
+    "source": "Accessibility navigation"
+  }
+]

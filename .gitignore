@@ -1,0 +1,38 @@
+# Gradle / Android
+.gradle/
+.kotlin/
+build/
+**/build/
+local.properties
+.idea/
+*.iml
+.cxx/
+captures/
+*.apk
+*.aab
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.log
+
+# Models / Large weights if any (leave directory structure if needed)
+models/*.bin
+models/*.onnx
+models/*.tflite
+
+# OS / IDE / Temp
+* - Copy*
+* - Copy/
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+*.bak

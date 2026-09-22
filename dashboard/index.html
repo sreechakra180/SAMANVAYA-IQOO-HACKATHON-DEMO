@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMANVAYA — Offline Multimodal Accessibility Copilot | Office Kit Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top HUD Navigation -->
+    <header class="hud-header">
+        <div class="header-left">
+            <div class="logo-group">
+                <div class="pulse-indicator"></div>
+                <h1 class="brand-title">SAMANVAYA</h1>
+                <span class="brand-badge">OFFLINE AI COPILOT</span>
+            </div>
+            <p class="brand-subtitle">Multimodal Accessibility Engine • Target: iQOO 15 (Snapdragon 8 Elite)</p>
+        </div>
+        <div class="header-right">
+            <div class="status-pill status-offline">
+                <span class="status-dot green"></span>
+                <span>AIRPLANE MODE SECURE • 0 EXTERNAL CALLS</span>
+            </div>
+            <div class="status-pill status-ws" id="wsPill">
+                <span class="status-dot cyan" id="wsDot"></span>
+                <span id="wsStatus">CONNECTING STREAM...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="dashboard-grid">
+        <!-- Metric Row -->
+        <section class="metrics-row">
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-label">PIPELINE LATENCY</span>
+                    <span class="metric-tag tag-cyan">Target &lt; 800ms</span>
+                </div>
+                <div class="metric-value-group">
+                    <span class="metric-value" id="kpiLatency">334</span>
+                    <span class="metric-unit">ms</span>
+                </div>
+                <div class="metric-footer">
+                    <span class="metric-sub">Vision: 180ms • RAG: 38ms • Reason: 116ms</span>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-label">INFERENCE CONFIDENCE</span>
+                    <span class="metric-tag tag-green">Calibrated</span>
+                </div>
+                <div class="metric-value-group">
+                    <span class="metric-value" id="kpiConfidence">96.8</span>
+                    <span class="metric-unit">%</span>
+                </div>
+                <div class="metric-footer">
+                    <span class="metric-sub">MiniCPM-V 4.6 + Qwen2-1.5B</span>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-label">SESSION MEMORY EVENTS</span>
+                    <span class="metric-tag tag-orange">Room SQLite</span>
+                </div>
+                <div class="metric-value-group">
+                    <span class="metric-value" id="kpiEvents">0</span>
+                    <span class="metric-unit">logged</span>
+                </div>
+                <div class="metric-footer">
+                    <span class="metric-sub">Stored 100% locally on device</span>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-label">HARDWARE ACCELERATION</span>
+                    <span class="metric-tag tag-cyan">Adreno + Hexagon NPU</span>
+                </div>
+                <div class="metric-value-group">
+                    <span class="metric-value">45</span>
+                    <span class="metric-unit">TOPS</span>
+                </div>
+                <div class="metric-footer">
+                    <span class="metric-sub">Thermal: 34.2°C • Battery: 88%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Middle Section: HUD Viewport + Live Feed -->
+        <section class="content-row">
+            <!-- Left: HUD Viewport & Waterfall -->
+            <div class="panel hud-panel">
+                <div class="panel-header">
+                    <h2>LIVE COPILOT VIEWPORT &amp; SPATIAL SENSORS</h2>
+                    <span class="badge-hud">HUD ACTIVE</span>
+                </div>
+                <div class="viewport-box">
+                    <div class="camera-simulation">
+                        <div class="crosshair-center"></div>
+                        <div class="hud-corner top-left"></div>
+                        <div class="hud-corner top-right"></div>
+                        <div class="hud-corner bottom-left"></div>
+                        <div class="hud-corner bottom-right"></div>
+                        
+                        <div class="bounding-box-demo" id="hudBox">
+                            <span class="box-tag" id="hudBoxTag">DETECTING OBJECT...</span>
+                        </div>
+
+                        <div class="hud-telemetry-overlay">
+                            <div>FPS: <span class="text-cyan">30.0</span> (Locked)</div>
+                            <div>COMPASS: <span class="text-cyan" id="hudHeading">142° SE</span></div>
+                            <div>MOTION: <span class="text-green" id="hudMotion">STATIONARY</span></div>
+                            <div>STEP COUNT: <span class="text-cyan">1,240</span></div>
+                        </div>
+
+                        <div class="hud-audio-cue">
+                            <div class="sound-wave">
+                                <span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                            <span id="hudAudioText">"SAMANVAYA listening on device..."</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latency Waterfall -->
+                <div class="waterfall-container">
+                    <div class="waterfall-title">REAL-TIME PIPELINE LATENCY WATERFALL</div>
+                    <div class="waterfall-bar-group">
+                        <div class="waterfall-item">
+                            <div class="wf-labels"><span>Camera Frame &amp; Vision Ingestion</span><span id="wfVisionMs">180 ms</span></div>
+                            <div class="wf-track"><div class="wf-fill cyan" id="wfVisionBar" style="width: 48%;"></div></div>
+                        </div>
+                        <div class="waterfall-item">
+                            <div class="wf-labels"><span>Local Knowledge Base RAG</span><span id="wfRagMs">38 ms</span></div>
+                            <div class="wf-track"><div class="wf-fill green" id="wfRagBar" style="width: 12%;"></div></div>
+                        </div>
+                        <div class="waterfall-item">
+                            <div class="wf-labels"><span>Local Reasoning &amp; Synthesis</span><span id="wfReasonMs">116 ms</span></div>
+                            <div class="wf-track"><div class="wf-fill orange" id="wfReasonBar" style="width: 32%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Real-time Session Feed -->
+            <div class="panel feed-panel">
+                <div class="panel-header">
+                    <h2>REAL-TIME EVENT STREAM</h2>
+                    <button class="btn-sm" id="btnClearFeed">Clear</button>
+                </div>
+                <div class="feed-list" id="feedList">
+                    <div class="feed-empty" id="feedEmpty">
+                        <div class="empty-icon">📡</div>
+                        <p>Awaiting events from phone or simulation...</p>
+                        <span class="subtext">Connect your iQOO device on local Wi-Fi or trigger a demo event below.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Row: Demonstration Control Bench & RAG Search Sandbox -->
+        <section class="control-row">
+            <div class="panel control-panel">
+                <div class="panel-header">
+                    <h2>JUDGE &amp; PRESENTER DEMO BENCH</h2>
+                    <span class="badge-tag">INTERACTIVE SIMULATION</span>
+                </div>
+                <p class="panel-desc">Trigger instant real-world accessibility events into the pipeline to demonstrate local multimodal reasoning:</p>
+                <div class="demo-buttons">
+                    <button class="btn-demo btn-medicine" onclick="triggerScenario('medicine')">
+                        <span class="btn-icon">💊</span>
+                        <div class="btn-content">
+                            <strong>Dolo 650 / Paracetamol</strong>
+                            <small>Medicine ID, Safe Interval &amp; Dosage Alert</small>
+                        </div>
+                    </button>
+                    <button class="btn-demo btn-hazard" onclick="triggerScenario('hazard')">
+                        <span class="btn-icon">⚠️</span>
+                        <div class="btn-content">
+                            <strong>High Voltage Hazard</strong>
+                            <small>Critical Safety Warning &amp; Distance Guidance</small>
+                        </div>
+                    </button>
+                    <button class="btn-demo btn-obstacle" onclick="triggerScenario('obstacle')">
+                        <span class="btn-icon">🪑</span>
+                        <div class="btn-content">
+                            <strong>Low Chair Obstacle</strong>
+                            <small>Spatial Direction &amp; Collision Avoidance</small>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="panel rag-panel">
+                <div class="panel-header">
+                    <h2>OFFLINE KNOWLEDGE BASE (RAG) EXPLORER</h2>
+                    <span class="badge-tag" id="ragModeBadge">JSON / FAISS INDEX</span>
+                </div>
+                <p class="panel-desc">Query verified Indian medicines and ISO standard hazards loaded in local storage:</p>
+                <div class="rag-search-box">
+                    <input type="text" id="ragInput" placeholder="Try 'paracetamol', 'high voltage', 'chair'..." />
+                    <button id="btnSearchRag" class="btn-action">Search RAG</button>
+                </div>
+                <div class="rag-results" id="ragResults">
+                    <div class="rag-placeholder">Results will appear here with source provenance &amp; chunk scores...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="hud-footer">
+        <div>SAMANVAYA • Team Sukshma • iQOO Hackathon 2026 Hyderabad City Battle</div>
+        <div>Engine: Kotlin Compose + AndroidX + FastAPI + Local RAG • Offline-First Guarantee</div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

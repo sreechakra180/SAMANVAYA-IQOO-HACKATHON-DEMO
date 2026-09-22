@@ -1,0 +1,42 @@
+[
+  {
+    "id": "high_voltage",
+    "content": "High voltage electrical hazard sign. Meaning: Danger from electric shock or electrocution. Action: Do not touch any equipment or wires in this area. Keep at least 1 metre distance. Do not enter if not qualified. If someone is injured by electricity do not touch them. Call emergency services immediately.",
+    "source": "ISO 7010 W012 — Electrical hazard"
+  },
+  {
+    "id": "no_entry",
+    "content": "No entry sign. Meaning: Access is prohibited to this area. Action: Do not proceed. Turn around. Find an authorised person for guidance.",
+    "source": "ISO 7010 P023 — No entry"
+  },
+  {
+    "id": "fire_exit",
+    "content": "Fire exit or emergency exit sign. Meaning: This is the route to safety in case of fire or emergency. Action: Follow the direction of the arrow. Move quickly but do not run. Do not use lifts during a fire emergency.",
+    "source": "ISO 7010 E001 — Emergency exit"
+  },
+  {
+    "id": "wet_floor",
+    "content": "Wet floor warning sign. Meaning: The floor surface is slippery due to liquid. Risk of slipping and falling. Action: Walk carefully. Hold a railing if available. Avoid the area if possible.",
+    "source": "ISO 7010 W011 — Slippery surface"
+  },
+  {
+    "id": "biohazard",
+    "content": "Biohazard warning sign. Meaning: Biological materials that are hazardous to health are present. Action: Do not enter unless authorised and equipped with appropriate protective gear. If you have been exposed, contact medical staff immediately.",
+    "source": "ISO 7010 W009 — Biological hazard"
+  },
+  {
+    "id": "flammable",
+    "content": "Flammable material warning sign. Meaning: Highly flammable substances are present. Risk of fire or explosion. Action: No open flames, smoking, or sparks in this area. Keep away from heat sources. Follow posted safety instructions.",
+    "source": "ISO 7010 W021 — Flammable material"
+  },
+  {
+    "id": "stairs_ahead",
+    "content": "Stairs ahead. If you are visually impaired, slow down. There are steps descending or ascending ahead. Use the handrail on your right or left. Count the steps as you descend or ascend.",
+    "source": "Accessibility navigation guidance"
+  },
+  {
+    "id": "generic_warning",
+    "content": "Warning sign detected. This sign indicates a potential hazard in this area. Please slow down and proceed with caution. Ask a sighted person for more details if possible.",
+    "source": "General safety guidance"
+  }
+]

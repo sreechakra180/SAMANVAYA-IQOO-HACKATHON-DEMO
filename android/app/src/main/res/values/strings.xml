@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">SAMANVAYA</string>
+
+    <!-- Accessibility descriptions -->
+    <string name="cd_tap_speak">Tap and speak your question</string>
+    <string name="cd_camera">Camera view for accessibility assistance</string>
+    <string name="cd_mic">Microphone for voice input</string>
+    <string name="cd_result">Analysis result</string>
+    <string name="cd_memory">Session memory history</string>
+
+    <!-- System messages -->
+    <string name="system_offline">LOCAL AI READY</string>
+    <string name="system_loading">MODEL LOADING…</string>
+    <string name="system_processing">ANALYZING…</string>
+    <string name="system_error">ERROR — see diagnostics</string>
+
+    <!-- Confidence labels -->
+    <string name="confidence_high">HIGH CONFIDENCE</string>
+    <string name="confidence_medium">MEDIUM CONFIDENCE</string>
+    <string name="confidence_low">LOW CONFIDENCE — try again</string>
+
+    <!-- Medical safety disclaimer -->
+    <string name="disclaimer_medical">
+        SAMANVAYA is an accessibility prototype, not a medical device.
+        Always consult a qualified healthcare professional before taking medication.
+    </string>
+
+    <!-- Tagline -->
+    <string name="tagline">Offline Accessibility Copilot</string>
+    <string name="tagline_sub">Point • Ask • Understand</string>
+</resources>

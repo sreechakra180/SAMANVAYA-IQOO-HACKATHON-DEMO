@@ -1,0 +1,42 @@
+[
+  {
+    "id": "paracetamol_500",
+    "content": "Paracetamol 500mg. Common names: Crocin, Dolo 650, Tylenol. Class: Analgesic and antipyretic. Used for fever and mild to moderate pain. Adult dosage: 500mg to 1000mg every 4 to 6 hours as needed. Maximum dose: 4 grams per day (8 tablets of 500mg). Do not exceed this limit. Store below 25 degrees Celsius. Do not use if allergic to paracetamol. Avoid alcohol. Caution in liver disease.",
+    "source": "WHO Essential Medicines List 2023 + CDSCO reference"
+  },
+  {
+    "id": "amoxicillin_500",
+    "content": "Amoxicillin 500mg. Class: Antibiotic, penicillin group. Used to treat bacterial infections. Adult dosage: 500mg every 8 hours or 875mg every 12 hours. Complete the full course even if you feel better. Do not share with others. Common side effects: nausea, diarrhoea, skin rash. Avoid if allergic to penicillin. May reduce effectiveness of oral contraceptives.",
+    "source": "WHO Essential Medicines List 2023"
+  },
+  {
+    "id": "metformin_500",
+    "content": "Metformin 500mg. Class: Antidiabetic, biguanide. Used to control blood sugar in type 2 diabetes. Take with meals to reduce stomach upset. Do not crush or chew extended-release tablets. Monitor kidney function regularly. Do not take if kidney disease is severe. Avoid alcohol. Common side effects: nausea, vomiting, diarrhoea especially at start of treatment.",
+    "source": "WHO Essential Medicines List 2023"
+  },
+  {
+    "id": "atorvastatin_10",
+    "content": "Atorvastatin 10mg. Brand: Lipitor, Atorva. Class: Statin. Used to lower cholesterol. Take once daily, with or without food. Avoid grapefruit juice. Report muscle pain or weakness immediately. Do not take during pregnancy. Regular liver function tests may be needed. Take at the same time each day.",
+    "source": "CDSCO India drug formulary"
+  },
+  {
+    "id": "omeprazole_20",
+    "content": "Omeprazole 20mg. Brand: Omez, Prilosec. Class: Proton pump inhibitor. Used for acid reflux, gastric ulcers, heartburn. Take 30 to 60 minutes before food. Swallow capsules whole, do not crush. Long-term use may reduce magnesium and vitamin B12 levels. Common side effects: headache, diarrhoea, nausea.",
+    "source": "WHO Essential Medicines List 2023"
+  },
+  {
+    "id": "cetirizine_10",
+    "content": "Cetirizine 10mg. Brand: Cetzine, Zyrtec. Class: Antihistamine. Used for allergies, hay fever, hives, itching. Adult dose: 10mg once daily. May cause drowsiness, avoid driving. Reduce dose if kidney impairment. Safe for most adults but consult a doctor if pregnant or breastfeeding.",
+    "source": "WHO Essential Medicines List 2023"
+  },
+  {
+    "id": "aspirin_75",
+    "content": "Aspirin 75mg. Class: Antiplatelet, analgesic. Low dose used for heart disease prevention. Take after food to reduce stomach irritation. Do not give to children under 16. Avoid if allergic to NSAIDs or aspirin. Increases bleeding risk. Do not take with other blood thinners without doctor advice.",
+    "source": "WHO Essential Medicines List 2023"
+  },
+  {
+    "id": "unknown_medicine",
+    "content": "If the medicine cannot be identified from the label, do not guess. Seek help from a pharmacist or doctor immediately. Never take an unidentified medicine.",
+    "source": "Safety guidance"
+  }
+]
